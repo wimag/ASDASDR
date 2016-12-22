@@ -31,6 +31,7 @@ object CallCommandFactory {
             }
             "pwd" -> PwdCommand()
             "exit" -> ExitCommand()
+            "grep" -> GrepCommand(call)
             else -> ExternalCommand(call)
         }
     }

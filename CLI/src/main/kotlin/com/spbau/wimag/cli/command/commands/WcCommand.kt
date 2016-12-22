@@ -28,5 +28,6 @@ class WcCommand(val input: InputStream? = null) : Command() {
         val lines = Files.lines(path).count()
         val res = "$lines $words $bytes"
         output.write(res.toByteArray())
+        Files.delete(path)
     }
 }
