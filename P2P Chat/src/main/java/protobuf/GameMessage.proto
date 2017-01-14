@@ -1,0 +1,48 @@
+package proto;
+option java_package = "proto";
+option java_outer_classname = "GameMessageProto";
+import "Entities.proto";
+
+message GameMessage {
+    enum Type {
+        GAME_INIT_MESSAGE = 1;
+        GAME_STATE_MESSAGE = 2;
+        GAME_END_MESSAGE = 3;
+        GAME_ERROR_MESSAGE = 4;
+    }
+
+    required Type type = 1;
+
+    optional GameInitMessage gameInitMessage = 2;
+    optional GameStateMessage gameStateMessage = 3;
+    optional GameEndMessage gameEndMessage = 4;
+    optional GameErrorMessage gameErrorMessage = 5;
+
+}
+
+message GameInitMessage {
+    required User user = 1;
+    required string gameType = 2;
+    required string gameID = 3;
+    required int32 chatID = 4;
+    required Group participants = 5;
+}
+
+message GameStateMessage {
+    required User user = 1;
+    required string gameID = 2;
+    required int32 timestamp = 3;
+    optional string value = 4;
+    repeated bytes data = 5;
+}
+
+message GameEndMessage {
+    required User user = 1;
+    required string gameID = 2;
+    optional string reason = 3;
+    optional string verifier = 4 [default = ""];
+}
+
+message GameErrorMessage {
+
+}

@@ -1,0 +1,10 @@
+package proto;
+option java_package = "proto";
+option java_outer_classname = "ChatMessageProto";
+import "Entities.proto";
+
+message ChatMessage {
+    required User user = 1;
+    required string message = 2;
+    required int32 chatId = 3;
+}
