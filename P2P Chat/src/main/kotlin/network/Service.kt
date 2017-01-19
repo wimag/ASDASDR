@@ -4,8 +4,8 @@ import com.google.protobuf.GeneratedMessage
 import network.dispatching.Dispatcher
 
 /**
- * Created by user on 6/22/16.
- * Interface describes GenericMessage consumers
+ * Entity that can provide a dispatcher
+ * for given message
  */
 interface Service<T : GeneratedMessage> {
     fun getDispatcher(): Dispatcher<T>

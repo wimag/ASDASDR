@@ -16,9 +16,6 @@ import java.net.URISyntaxException
 import java.text.NumberFormat
 import javax.swing.*
 
-/**
- * Created by user on 6/24/16.
- */
 class ChatManagerGUI() {
     internal val appName = "P2P chat + [${Settings.hostAddress.port}]"
     internal var usernameChooser: JTextField = JTextField()

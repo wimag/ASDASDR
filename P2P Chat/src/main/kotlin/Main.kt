@@ -1,16 +1,9 @@
-/**
- * Created by user on 8/12/16.
- */
 import apps.chat.ChatManager
 import org.apache.commons.cli.*
 import org.apache.log4j.BasicConfigurator
 import java.net.InetAddress
 import java.net.InetSocketAddress
 import java.net.Socket
-
-/**
- * Created by user on 6/20/16.
- */
 
 fun main(args: Array<String>) {
     val cmd: CommandLine

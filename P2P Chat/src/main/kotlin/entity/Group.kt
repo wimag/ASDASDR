@@ -2,11 +2,10 @@ package entity
 
 import proto.EntitiesProto
 
-/**
- * Created by user on 6/20/16.
- * * Open - for mockito testing purposes
- */
 
+/**
+ * Model for protobuf Group
+ */
 open class Group(users: MutableSet<User>) : ProtobufSerializable<EntitiesProto.Group>, Cloneable {
     open val users: MutableSet<User> = users
 

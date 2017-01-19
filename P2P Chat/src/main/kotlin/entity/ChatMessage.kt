@@ -3,11 +3,9 @@ package entity
 import apps.chat.Chat
 import proto.ChatMessageProto
 
-
 /**
- * Created by user on 6/24/16.
+ * Model for protobuf ChatMessage
  */
-
 class ChatMessage(val chatId: Int, val user: User, val message: String) : ProtobufSerializable<ChatMessageProto.ChatMessage> {
     constructor(msg: ChatMessageProto.ChatMessage) : this(msg.chatId,
             User(msg.user), msg.message) {

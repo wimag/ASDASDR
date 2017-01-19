@@ -14,11 +14,10 @@ import network.dispatching.Dispatcher
 import proto.GenericMessageProto
 import java.net.InetSocketAddress
 
+
 /**
- * Created by user on 6/21/16.
+ * Netty message server
  */
-
-
 class MessageServer(val addr: InetSocketAddress, val dispatcher: Dispatcher<GenericMessageProto.GenericMessage>) {
     private val future: ChannelFuture
     val bootstrap = ServerBootstrap()

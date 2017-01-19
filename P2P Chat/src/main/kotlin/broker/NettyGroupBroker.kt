@@ -7,9 +7,14 @@ import network.ConnectionManagerClass
 import proto.GenericMessageProto
 
 /**
- * Created by user on 6/20/16.
+ * Message broker based on Netty framework
+ * @see{#GroupBroker}
  */
 class NettyGroupBroker(val connectionManager: ConnectionManagerClass = ConnectionManager) : GroupBroker {
+
+    /**
+     * @see{#GroupBroker.broadcastAsync}
+     */
     override fun broadcastAsync(group: Group,
                                 msg: GenericMessageProto.GenericMessage) {
         synchronized(group.users) {
@@ -20,6 +25,9 @@ class NettyGroupBroker(val connectionManager: ConnectionManagerClass = Connectio
     }
 
 
+    /**
+     * @see{#GroupBroker.broadcastAsync}
+     */
     override fun sendAsync(user: User,
                            msg: GenericMessageProto.GenericMessage) {
         connectionManager.sendAsync(user.hostAddress, msg)

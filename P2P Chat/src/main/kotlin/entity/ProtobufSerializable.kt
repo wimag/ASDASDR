@@ -3,7 +3,8 @@ package entity
 import com.google.protobuf.GeneratedMessage
 
 /**
- * Created by user on 6/24/16.
+ * Describes objects, that can be easily converted to
+ * protobuf
  */
 interface ProtobufSerializable<T : GeneratedMessage> {
     fun getProto(): T

@@ -5,9 +5,6 @@ import com.google.protobuf.GeneratedMessage
 import proto.GenericMessageProto
 
 /**
- * Created by user on 6/21/16.
- */
-/**
  * Dispatch messages for given aggregator type
  *
  * Message structure:

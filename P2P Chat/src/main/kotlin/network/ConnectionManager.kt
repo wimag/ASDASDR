@@ -5,13 +5,14 @@ import network.dispatching.EnumDispatcher
 import proto.GenericMessageProto
 import java.net.InetSocketAddress
 
-/**
- * Created by user on 6/22/16.
- */
 object ConnectionManager : ConnectionManagerClass(Settings.clientAddress,
         Settings.hostAddress) {
 }
 
+/**
+ * Entity responsible for conducting and monitoring
+ * all network operations
+ */
 open class ConnectionManagerClass(client: InetSocketAddress, host: InetSocketAddress) {
     val dispatcher = EnumDispatcher(
             GenericMessageProto.GenericMessage.getDefaultInstance())

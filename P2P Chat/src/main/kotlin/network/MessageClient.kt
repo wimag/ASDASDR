@@ -15,7 +15,6 @@ import java.net.InetSocketAddress
 import java.util.concurrent.LinkedBlockingQueue
 
 /**
- * Created by Mark Geller on 6/21/16.
  * simple message client - transfers protobuf messages to server
  */
 class MessageClient(val addr: InetSocketAddress) {

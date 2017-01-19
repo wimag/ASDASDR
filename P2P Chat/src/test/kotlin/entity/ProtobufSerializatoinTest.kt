@@ -4,10 +4,8 @@ import common.getSampleUser1
 import common.getSmapleGroup
 import org.junit.Assert.assertEquals
 import org.junit.Test
+import proto.EntitiesProto
 
-/**
- * Created by user on 6/24/16.
- */
 class ProtobufSerializatoinTest {
     @Test
     fun testUserSerialization() {

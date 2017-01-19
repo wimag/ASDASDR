@@ -10,9 +10,7 @@ import proto.GenericMessageProto
 import javax.swing.UIManager
 
 /**
- * Created by user on 6/22/16.
- * Represents logic behind chat
- * Open - for mockito testing purposes
+ * Representation of chat prsented to final user
  */
 open class Chat(val chatId: Int) : Runnable {
     // chat users in this group
@@ -96,7 +94,7 @@ open class Chat(val chatId: Int) : Runnable {
     }
 
     /**
-     * get Input from
+     * get Input from user
      */
     open fun getUserInput(description: String,
                           condition: ((String) -> (Boolean))? = { x: String -> true }): String {

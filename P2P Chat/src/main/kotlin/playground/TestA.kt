@@ -8,9 +8,6 @@ import java.net.InetSocketAddress
 import java.net.Socket
 
 
-/**
- * Created by user on 6/20/16.
- */
 
 fun main(args: Array<String>) {
     BasicConfigurator.configure()

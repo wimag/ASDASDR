@@ -5,11 +5,18 @@ import entity.User
 import proto.GenericMessageProto
 
 /**
- * Created by user on 6/20/16.
+ * Interface describing entities capable
+ * of sending messages
  */
 interface GroupBroker {
+    /**
+     * Send message to a whole group
+     */
     fun broadcastAsync(group: Group, msg: GenericMessageProto.GenericMessage)
 
+    /**
+     * Send message to a single user
+     */
     fun sendAsync(user: User, msg: GenericMessageProto.GenericMessage)
 
 }

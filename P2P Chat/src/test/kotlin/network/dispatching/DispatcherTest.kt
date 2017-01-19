@@ -10,9 +10,6 @@ import proto.ChatMessageProto
 import proto.GenericMessageProto
 import proto.QueryProto
 
-/**
- * Created by user on 6/22/16.
- */
 
 class DispatcherTest {
     @Test

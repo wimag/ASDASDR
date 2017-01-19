@@ -1,10 +1,11 @@
 package common
 
+import proto.ChatMessageProto
+import proto.EntitiesProto
+import proto.GenericMessageProto
+import proto.QueryProto
 import java.net.InetSocketAddress
 
-/**
- * Created by user on 6/22/16.
- */
 
 fun getSampleUser1(): EntitiesProto.User {
     val addr: InetSocketAddress = InetSocketAddress("localhost", 1231)

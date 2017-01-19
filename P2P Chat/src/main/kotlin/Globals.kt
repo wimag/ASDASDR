@@ -1,8 +1,5 @@
 import java.net.InetSocketAddress
 
-/**
- * Created by user on 6/24/16.
- */
 
 val DEBUG = true
 

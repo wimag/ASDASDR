@@ -15,10 +15,6 @@ import proto.QueryProto
 import java.net.InetSocketAddress
 import javax.swing.UIManager
 
-/**
- * Created by Mark Geller on 6/23/16.
- * Entity for managing chats
- */
 
 object ChatManager {
     val chats = mutableSetOf<Chat>()

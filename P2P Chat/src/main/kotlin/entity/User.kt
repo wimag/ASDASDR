@@ -3,9 +3,6 @@ package entity
 import proto.EntitiesProto
 import java.net.InetSocketAddress
 
-/**
- * Created by Mark Geller on 6/20/16.
- */
 
 class User(val hostAddress: InetSocketAddress, val name: String) : ProtobufSerializable<EntitiesProto.User> {
 
